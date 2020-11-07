@@ -3,7 +3,6 @@ package Shop;
 public class Customer {
     int id;
     String name;
-    public enum Membership { GOLD, SILVER, NO}
     Membership membership;
 
     Customer(){

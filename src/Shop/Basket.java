@@ -14,7 +14,7 @@ public class Basket {
         totalPrice = totalPrice + candy.quantity * candy.price;
     }
 
-    static double getTotalPrice(Customer.Membership membership){
+    double getTotalPrice(Membership membership){
         switch(membership){
             case NO:
                 return totalPrice;
@@ -27,24 +27,5 @@ public class Basket {
         }
 
     }
-    public static void main(String[] args){
-        Customer customer1 = new Customer();
-        customer1.setMembership(Customer.Membership.GOLD);
-        Book book1 = new Book(1, "Inteligenta emotionala",32, "Goldman");
-        Book book2 = new Book(1, "Minialism Digital", 10, "IDKAUTHOR");
-        Candy jelly = new Candy(2,"Jeleuri dulci", 2, 2 );
-        Basket basket1 = new Basket(customer1);
-        basket1.addToBasket(book1);
-        basket1.addToBasket(book2);
-        basket1.addToBasket(jelly);
-        System.out.println("For now, you have to pay, with a discount: " + getTotalPrice(customer1.membership));
-        customer1.setMembership(Customer.Membership.SILVER);
-        System.out.println("For now, you have to pay, with a different discount: " + getTotalPrice(customer1.membership));
 
-
-
-
-
-
-    }
 }
